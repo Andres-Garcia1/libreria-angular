@@ -1,0 +1,19 @@
+<div>
+    <h2 style="margin-top: 40px; font-weight: bold; text-align: center">SELECCIONE LA ACCION QUE DESEA REALIZAR</h2>
+    <br>
+    <div style="display: flex; align-items: center; justify-content: center">
+        <button (click)="this.seleccionarComponente('registrar')">Registrar libro</button>&nbsp;
+        <button (click)="this.seleccionarComponente('buscar')" class="search">Buscar libro</button>
+    </div>
+
+    <br> <br>
+</div>
+<div *ngIf="this.opcionSeleccionada=='registrar'">
+<app-libros></app-libros>
+</div>
+
+<div *ngIf="this.opcionSeleccionada=='buscar'">
+    <app-buscarlibro></app-buscarlibro>
+</div>
+
+   

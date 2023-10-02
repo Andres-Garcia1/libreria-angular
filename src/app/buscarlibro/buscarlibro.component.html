@@ -1,0 +1,19 @@
+<div style="display: flex; align-items: center; justify-content: center">
+    <label>Buscar Libro</label>&nbsp;
+    <input type="text" class="form-control" style="width: 200px;">
+
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center">
+    <ol>
+        <li *ngFor="let libro of libros">
+          {{ libro.titulo }} (ID: {{ libro.id }}) - Copias disponibles: {{ libro.copiasDisponibles }}
+         
+        </li>
+      </ol>
+      
+</div>
+<div style="display: flex; align-items: center; justify-content: center">
+    <button (click)="('Prestar libro')"class="prestar">Prestar libro</button>&nbsp;
+    <button (click)="('Cancelar')" class="cancel">Cancelar</button>
+</div>
